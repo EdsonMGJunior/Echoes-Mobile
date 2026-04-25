@@ -22,10 +22,10 @@ export const styles_SearchBar = StyleSheet.create({
         backgroundColor: '#185fa5',
         borderRadius: 50,
         height: 50,
-        width: 400,
+        width: 420,
         gap: 6,
-        left: 0,  // substitui o left: 50
-        top: -30
+        left: -5,  // substitui o left: 50
+        top: -55
     }
 })
 

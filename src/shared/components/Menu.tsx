@@ -1,5 +1,4 @@
 import { StyleSheet, TouchableOpacity, Text} from 'react-native';
-import { styles } from './Barra_Pesquisa';
 
 export const Titulo = () => {
 
@@ -26,7 +25,7 @@ const Texto = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         color: "#185fa5",
-        top: 200,
+        top: 100,
         left: 10
     }
 })
@@ -40,8 +39,8 @@ const Botao = StyleSheet.create({
         height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        top: 80,
-        left: 300
+        top: 770,
+        left: 5
     }
 })
 
