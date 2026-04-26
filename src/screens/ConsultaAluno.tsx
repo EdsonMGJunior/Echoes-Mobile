@@ -6,7 +6,7 @@ import BaseView from '../components/BaseView';
 
 export default function ConsultaAluno() {
   return (
-    <BaseView>
+    <BaseView style={{ padding: 20 }}>
       <Titulo></Titulo>
       <Menu></Menu>
       <Barra_Pesquisa></Barra_Pesquisa>

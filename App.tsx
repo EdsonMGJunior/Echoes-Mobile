@@ -5,7 +5,7 @@ import Inicio from './src/screens/Inicio';
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Inicio/>
+      <ConsultaAluno/>
     </SafeAreaView>
   );
 }
