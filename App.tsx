@@ -1,27 +1,11 @@
-import { StyleSheet, View } from 'react-native';
-import { useState } from 'react';
-import { BtnEditar } from './src/shared/components/BotãoEditar';
-import { Profile, pickImage, takePhoto } from './src/shared/components/Foto_Perfil';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import ConsultaAluno from './src/screens/ConsultaAluno';
+import Inicio from './src/screens/Inicio';
 
 export default function App() {
-  const [image, setImage] = useState<string | null>(null);
-
   return (
-    <View style={Tela.container}>
-      <Profile image={image} setImage={setImage}/>
-      <BtnEditar
-        pickImage={() => pickImage(setImage)}
-        takePhoto={() => takePhoto(setImage)}
-        onEditarInformacoes={() => {/* futuramente navegação ou modal */}}
-      />
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ConsultaAluno/>
+    </SafeAreaView>
   );
 }
-
-const Tela = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 16,
-    backgroundColor: "#fff",
-  }
-});
