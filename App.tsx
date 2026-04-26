@@ -6,7 +6,7 @@ import { BtnAction } from './src/shared/components/Ações';
 
 export default function App() {
   return (
-    <View>
+    <View style={Tela.container}>
       <Titulo></Titulo>
       <Menu></Menu>
       <Barra_Pesquisa></Barra_Pesquisa>
@@ -15,6 +15,15 @@ export default function App() {
     </View>
   );
 }
+
+const Tela = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingHorizontal: 16,
+    backgroundColor: "#fff",
+    margin: "0%"
+  }
+})
 
 
 /*const styles = StyleSheet.create({

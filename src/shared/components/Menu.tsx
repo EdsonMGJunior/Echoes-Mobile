@@ -26,7 +26,7 @@ const Texto = StyleSheet.create({
         fontWeight: "bold",
         color: "#185fa5",
         top: 100,
-        left: 10
+        left: -5
     }
 })
 
@@ -40,7 +40,7 @@ const Botao = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         top: 770,
-        left: 5
+        left: -5
     }
 })
 

@@ -90,7 +90,7 @@ const style = StyleSheet.create({
     top: 675,
     width: 50,
     height: 40,
-    left: 350,
+    left: 335,
   },
   overlay: {
     flex: 1,

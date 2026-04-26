@@ -9,21 +9,19 @@ type Props = {
 export const ModalCriarTurmas = ({ visible, onClose }: Props) => {
   const [nome, setNome] = useState("");
   const [descricao, setDescricao] = useState("");
-  const [codigo, setCodigo] = useState("");
 
   const handleCancelar = () => {
     setNome("");
     setDescricao("");
-    setCodigo("");
     onClose();
   };
 
   const handleCriar = () => {
-    if (!nome || !descricao || !codigo) {
+    if (!nome || !descricao) {
       Alert.alert("Atenção", "Preencha todos os campos!");
       return;
     }
-    console.log("Nova Turma: ", { nome, descricao, codigo });
+    console.log("Nova Turma: ", { nome, descricao });
     handleCancelar();
   };
 
@@ -47,14 +45,6 @@ export const ModalCriarTurmas = ({ visible, onClose }: Props) => {
             onChangeText={setDescricao}
             multiline
             numberOfLines={3}
-          />
-          <Text style={style.label}>Código</Text>
-          <TextInput
-            style={style.input}
-            placeholder="Ex: TRM001"
-            value={codigo}
-            onChangeText={setCodigo}
-            autoCapitalize="characters"
           />
           <View style={style.botoesContainer}>
             <TouchableOpacity style={style.botaoCancelar} onPress={handleCancelar}>
