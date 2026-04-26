@@ -44,22 +44,8 @@ export default function Inicio() {
       icon='lock'
       />
 
-      <BtnRegistrar/>
+      <BtnRegistrar onPress={registro.registrar}/>
     </BaseView>
       
   );
 }
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  Logotipo: {width: 150, 
-    height: 150,
-    left: 0,
-    top: -200},
-});

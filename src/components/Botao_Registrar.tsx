@@ -1,9 +1,13 @@
 import { Text, TouchableOpacity } from 'react-native';
 import { StyleSheet } from 'react-native';
 
-export const BtnRegistrar = () => {
+export interface BtnRegistrarProps {
+  onPress?: any;
+}
+
+export const BtnRegistrar = ({ onPress }: BtnRegistrarProps) => {
   return (
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.texto}>
             Registrar
         </Text>

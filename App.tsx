@@ -1,11 +1,13 @@
 import { SafeAreaView } from 'react-native-safe-area-context';
-import ConsultaAluno from './src/screens/ConsultaAluno';
-import Inicio from './src/screens/Inicio';
+import { NavigationContainer } from '@react-navigation/native';
+import { Stack } from './src/navigators/Stack';
 
 export default function App() {
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ConsultaAluno/>
+      <NavigationContainer>
+        <Stack/>
+      </NavigationContainer>
     </SafeAreaView>
   );
 }
