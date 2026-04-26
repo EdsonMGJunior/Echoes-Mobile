@@ -1,17 +1,19 @@
-import { StyleSheet, View, Image, TextInput, SafeAreaViewBase} from 'react-native';
-import { Barra_Pesquisa } from './src/shared/components/Barra_Pesquisa';
-import { BtnTurmas } from './src/shared/components/Btn_Turmas';
-import { Menu, Titulo } from './src/shared/components/Menu'
-import { BtnAction } from './src/shared/components/Ações';
+import { StyleSheet, View } from 'react-native';
+import { useState } from 'react';
+import { BtnEditar } from './src/shared/components/BotãoEditar';
+import { Profile, pickImage, takePhoto } from './src/shared/components/Foto_Perfil';
 
 export default function App() {
+  const [image, setImage] = useState<string | null>(null);
+
   return (
     <View style={Tela.container}>
-      <Titulo></Titulo>
-      <Menu></Menu>
-      <Barra_Pesquisa></Barra_Pesquisa>
-      <BtnAction></BtnAction>
-
+      <Profile image={image} setImage={setImage}/>
+      <BtnEditar
+        pickImage={() => pickImage(setImage)}
+        takePhoto={() => takePhoto(setImage)}
+        onEditarInformacoes={() => {/* futuramente navegação ou modal */}}
+      />
     </View>
   );
 }
@@ -21,20 +23,5 @@ const Tela = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
     backgroundColor: "#fff",
-    margin: "0%"
   }
-})
-
-
-/*const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#ffffff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  Logotipo: {width: 150, 
-    height: 150,
-    left: 0,
-    top: -200},
-});*/
+});
