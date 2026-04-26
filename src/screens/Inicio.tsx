@@ -20,28 +20,28 @@ export default function Inicio() {
       value={registro.nome}
       onChangeText={registro.setNome}
       placeholder='Nome do aluno'
-      placeholderTextColor='#ccc'
+      icon='user'
       />
       <Input
       value={registro.email}
       onChangeText={registro.setEmail}
       placeholder='Email'
-      placeholderTextColor='#ccc'
       keyboardType='email-address'
+      icon='at-sign'
       />
       <Input
       value={registro.senha}
       onChangeText={registro.setSenha}
       placeholder='Senha do aluno'
-      placeholderTextColor='#ccc'
       secureTextEntry
+      icon='lock'
       />
       <Input
       value={registro.confirmSenha}
       onChangeText={registro.setConfirmSenha}
       placeholder='Confirme a senha'
-      placeholderTextColor='#ccc'
       secureTextEntry
+      icon='lock'
       />
 
       <BtnRegistrar/>

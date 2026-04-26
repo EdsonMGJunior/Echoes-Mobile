@@ -1,4 +1,3 @@
-import { View } from 'react-native';
 import { Barra_Pesquisa } from '../components/Barra_Pesquisa';
 import { Menu, Titulo } from '../components/Menu'
 import { BtnAction } from '../components/Ações';
